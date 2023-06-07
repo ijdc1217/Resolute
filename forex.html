@@ -1,0 +1,287 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Resolute - Forex</title>
+        <link href="styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+	</head>
+	<body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark stocknav" id="header">
+            <!-- Navbar Brand-->
+            <h1><a href="index.html" class="p-4">Resolute</a></h1>
+            <!-- Sidebar Toggle-->
+            <a class="btn btn-link btn-sm order-1 order-lg-0 m-5 me-lg-0" id="sidebarToggle" href="#!"><i
+                    class="fas fa-bars"></i></a>
+                    <nav>
+                        <a href="#menu">FOREX</a>
+                    </nav>
+            
+            <!-- Navbar-->
+    
+        </nav>
+        <nav id="menu">
+            <div class="inner">
+                <h2>Menu</h2>
+                <ul class="links">
+                    <li><a href="index.html">Home</a></li>
+					<li><a href="stocks.html">Stocks</a></li>
+					<li><a href="forex.html">Forex</a></li>
+					<li><a href="crypto.html">Crypto</a></li>
+                </ul>
+                <a href="#" class="close">Close</a>
+            </div>
+        </nav>
+				<!-- Banner -->
+					
+                <div id="layoutSidenav">
+                    <div id="layoutSidenav_nav">
+                        <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                            <div class="sb-sidenav-menu">
+                                <div class="nav">
+                                    <a class="nav-link" href="#" onclick="fetch_populate(eur_url)">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/565/565500.png" alt="Image 1"
+                                            class="mr-2" height="50px" width="50px">
+                                            
+                                        <span class="text-layer p-3">
+                                            <strong class="mb-1">Euro Dollar</strong><br>
+                                            <span class="text-layer-2 small text-danger">-4.10 (-2.38%)</span>
+                                        </span>
+                                    </a>
+                                    <a class="nav-link" href="#" onclick="fetch_populate(eur_url)">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/25/25228.png"
+                                            alt="Image 1" class="mr-2" height="50px" width="50px">
+                                        <span class="text-layer p-3">
+                                            <strong class="text-layer-1">US Dollar</strong><br>
+                                            <span class="text-layer-2 small text-success">+1.94 (+1.60%)</span>
+                                        </span>
+                                    </a>
+                                    <a class="nav-link" href="#" onclick="fetch_populate(eur_url)">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/33/33917.png"
+                                            alt="Image 1" class="mr-2" height="50px" width="50px">
+                                        <span class="text-layer p-3">
+                                            <strong class="text-layer-1">Pound</strong><br>
+                                            <span class="text-layer-2 small text-danger">-0.94 (-0.54%)</span>
+                                        </span>
+                                    </a>
+                                    <a class="nav-link" href="#" onclick="fetch_populate(eur_url)">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/2223/2223323.png"
+                                            alt="Image 1" class="mr-2" height="50px" width="50px">
+                                        <span class="text-layer p-3">
+                                            <strong class="text-layer-1">Yen</strong><br>
+                                            <span class="text-layer-2 small text-danger">-1.92 (-1.71%)</span>
+                                        </span>
+                                    </a>
+                                    <a class="nav-link" href="#" onclick="fetch_populate(eur_url)">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/5719/5719089.png"
+                                            alt="Image 1" class="mr-2" height="50px" width="50px">
+                                        <span class="text-layer p-3">
+                                            <strong class="text-layer-1">AUD</strong><br>
+                                            <span class="text-layer-2 small text-danger">-2.10 (1.38%)</span>
+                                        </span>
+                                    </a>
+                                    <a class="nav-link" href="#" onclick="fetch_populate(eur_url)">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/4484/4484708.png"
+                                            alt="Image 1" class="mr-2" height="50px" width="50px">
+                                        <span class="text-layer p-3">
+                                            <strong class="text-layer-1">Franc</strong><br>
+                                            <span class="text-layer-2 small text-success">+2.28 (0.74%)</span>
+                                        </span>
+                                    </a>
+                                    <a class="nav-link" href="#" onclick="fetch_populate(eur_url)">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/153/153117.png"
+                                            alt="Image 1" class="mr-2" height="50px" width="50px">
+                                        <span class="text-layer p-3">
+                                            <strong class="text-layer-1">CAD</strong><br>
+                                            <span class="text-layer-2 small text-danger">-0.73 (1.14%)</span>
+                                        </span>
+                                    </a>
+                                    <a class="nav-link" href="#" onclick="fetch_populate(eur_url)">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/2396/2396082.png"
+                                            alt="Image 1" class="mr-2" height="50px" width="50px">
+                                        <span class="text-layer p-3">
+                                            <strong class="text-layer-1">Yuan</strong><br>
+                                            <span class="text-layer-2 small text-success">+1.70 (0.42%)</span>
+                                        </span>
+                                    </a>
+                                    <a class="nav-link" href="#" onclick="fetch_populate(eur_url)">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/4753/4753136.png"
+                                            alt="Image 1" class="mr-2" height="50px" width="50px">
+                                        <span class="text-layer p-3">
+                                            <strong class="text-layer-1">Won</strong><br>
+                                            <span class="text-layer-2 small text-danger">-5.98 (2.21%)</span>
+                                        </span>
+                                    </a>
+                                    <a class="nav-link" href="#" onclick="fetch_populate(eur_url)">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/94/94803.png"
+                                            alt="Image 1" class="mr-2" height="50px" width="50px">
+                                        <span class="text-layer p-3">
+                                            <strong class="text-layer-1">HKD</strong><br>
+                                            <span class="text-layer-2 small text-success">+0.61 (4.76%)</span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+            
+                        </nav>
+                    </div>
+                    <div id="layoutSidenav_content">
+                        <main>
+                            <div class="jumbotron jumbotron-fluid p-4 m-4 bg-body-tertiary border rounded-3 bg-dark">
+                            <div class="main-container p-4">
+                                <div class="container">
+                                    <h1 class="pb-3 text-light" id="currencyName"></h1>
+                                </div>
+                                <div class="row my-3">
+                                    <!-- line chart -->
+                                    <div class="col-12">
+                                        <div class="card" id="line_card">
+                                            <div class="card-header chart1">
+                                                Stock Close Info
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="container" id="line_container">
+                                                  </div>
+                                            </div>
+                                            <div class="card-footer small text-muted">Updated 5 secs ago
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <strong>Trade to:</strong>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="btn-group me-2 w-100" role="group" aria-label="First group">
+                                            <button type="button" class="btn btn-outline-secondary">EURO</button>
+                                            <button type="button" class="btn btn-outline-secondary">USD</button>
+                                            <button type="button" class="btn btn-outline-secondary">POUND</button>
+                                            <button type="button" class="btn btn-outline-secondary">YEN</button>
+                                            <button type="button" class="btn btn-outline-secondary">AUD</button>
+                                            <button type="button" class="btn btn-outline-secondary">FRANC</button>
+                                            <button type="button" class="btn btn-outline-secondary">CAD</button>
+                                            <button type="button" class="btn btn-outline-secondary">YUAN</button>
+                                            <button type="button" class="btn btn-outline-secondary">WON</button>
+                                            <button type="button" class="btn btn-outline-secondary">HKD</button>
+                                          </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row my-5" style="height: 250px;">
+                                    <!-- peaks & troughs -->
+                                    <div class="col-8 my-auto">
+                                        <!-- peaks -->
+                                        <div class="row">
+                                            <div class="col-3 px-0 py-2 mx-auto">
+                                                <div class="card text-center">
+                                                    <div class="card-header bg-success">
+                                                        Highest Open
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <strong class="card-title" id="p_open"></strong>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3 px-0 py-2 mx-auto">
+                                                <div class="card text-center">
+                                                    <div class="card-header bg-success">
+                                                        Highest High
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <strong class="card-title" id="p_high"></strong>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3 px-0 py-2 mx-auto">
+                                                <div class="card text-center">
+                                                    <div class="card-header bg-success">
+                                                        Highest Low
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <strong class="card-title" id="p_low"></strong>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <!-- troughs -->
+                                        <div class="row">
+                                            <div class="col-3 px-0 py-2 mx-auto">
+                                                <div class="card text-center">
+                                                    <div class="card-header bg-danger">
+                                                        Lowest Open
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <strong class="card-title" id="t_open"></strong>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3 px-0 py-2 mx-auto">
+                                                <div class="card text-center">
+                                                    <div class="card-header bg-danger">
+                                                        Lowest High
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <strong class="card-title" id="t_high"></strong>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3 px-0 py-2 mx-auto">
+                                                <div class="card text-center">
+                                                    <div class="card-header bg-danger">
+                                                        Lowest low
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <strong class="card-title" id="t_low"></strong>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- analysis -->
+                                    <div class="col-4">
+                                        <div class="card" id="line_card">
+                                            <div class="card-header chart1">
+                                                Analysis
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="container" id="doughnut_container">
+                                                 </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </main>
+            
+                    </div>
+                </div>
+            
+
+		<!-- Scripts -->
+        <script src="forex.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"
+        crossorigin="anonymous"></script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
